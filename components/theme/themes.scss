@@ -1,0 +1,88 @@
+// *** BASIC STYLES FOR ALL SUB-PROJECTS: ***
+// Color Maps
+//$accent-colors: ( bh: $slate-green, gqc: $gqc-color__accent, rsdocs: $rsdocs-color__accent);
+//$links-colors: ( chpress: $dull-teal, gqc: $gqc-color__accent, rsdocs: $rsdocs-color__links);
+// Duplicates this code with each value from the above maps.
+@each $proj in chpress,
+gqc,
+rsdocs {
+    .#{$proj} {
+        %link {
+            @include colorHover(map-get($links-colors, $proj), 6);
+            @extend %hoverText;
+        }
+        %text-color__accent {
+            color: map-get($accent-colors, $proj);
+        }
+        %text-color__link {
+            color: map-get($links-colors, $proj);
+        }
+        .search-bar__button.search {
+            background-color: map-get($accent-colors, $proj);
+        }
+        .sub-header {
+            background: map-get($accent-colors, $proj);
+            #site-nav a {
+                @include colorHover($color__white, 20, map-get($accent-colors, $proj));
+                text-decoration: none;
+            }
+        }
+        a {
+            @extend %link;
+            .teaser__title,
+            .teaser__cta {
+                @include colorHover(map-get($links-colors, $proj), 6);
+            }
+        }
+        .button {
+            @include backgroundHover(map-get($accent-colors, $proj), 4);
+            &:hover,
+            &:active {
+                text-decoration: none;
+            }
+        }
+        .cta-button {
+            a.teaser__link.cta {
+                &:active .teaser__cta {
+                    background: lighten(map-get($accent-colors, $proj), 4);
+                }
+                p.teaser__cta {
+                    @include backgroundHover(map-get($accent-colors, $proj), 4);
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        %event__hover {
+            &:after {
+                content: '';
+                display: block;
+                height: 4px;
+                width: 100%;
+                background: map-get($accent-colors, $proj);
+            }
+        }
+        .selected__event {
+            @extend %event__hover;
+        }
+        .people #people-nav, .worksCited #letter-nav {
+            a {
+                @include backgroundHover(map-get($accent-colors, $proj), 4);
+            }
+
+            .selected a {
+                background: darken(map-get($accent-colors, $proj), 15);
+            }
+        }
+        @media only screen and (min-width: $breakpoint--l + 1) {
+            .header {
+                h1 {
+                    a {
+                        background: map-get($accent-colors, $proj);
+                    }
+                }
+            }
+        }
+    }
+}

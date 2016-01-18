@@ -1,0 +1,62 @@
+
+// GREYS
+
+$color__white: #FFFFFF;
+$color__white--translucent: rgba($color__white, 0.5);
+$color__black: #000000;
+$color__black--translucent: rgba($color__black, 0.3);
+$color__graphite: #333333;
+$color__graphite--translucent: rgba(darken($color__graphite, 5%), 0.95);
+$color__dark: #555555;
+$color__stone: #737373;
+$color__smoke: #B6B6B6;
+$color__grey: #d3d3d3;
+$color__cement: #E6E6E6;
+$color__cloud: #f3f3f3;
+
+
+// COLORS
+
+// ########## DEPRECATED COLORS ############
+// leaving these colors in for a few releases, but making it an ugly color so your builds don't fail, but you come look to see what is going on
+$color__cerulean: #FF0000;
+$color__lunar-soil: #FF0000;
+// ########## /DEPRECATED COLORS ############
+
+$color__cobalt: #187EAD;
+$color__cobalt--dark: #105C84;
+$color__cobalt--light: #1891C9; //same as dark sky
+
+$color__sky: #43B2E5;
+$color__sky--dark: $color__cobalt--light;
+$color__sky--light: #79CDF4;
+
+$color__fern: #52BD96;
+$color__fern--dark: #269F73;
+$color__fern--light: #76DCB7;
+
+$color__honey: #F89E1E;
+$color__honey--dark: #e28300;
+$color__honey--light: #FFBC5D;
+
+$color__rose: #EF5458;
+$color__rose--dark: #DC373A;
+$color__rose--light: #FC7579;
+
+$color__leaf: #65B12B;
+$color__leaf--dark: #43870E;
+$color__leaf--light: #86CF4F;
+
+$color__dusk: #7d6bad;
+$color__dusk--dark: #645293;
+$color__dusk--light: #9D87D5;
+
+//SOCIAL COLORS
+
+$color__twitter: #00b6f1;
+$color__facebook: #3b5998;
+$color__pinterest: #cb2027;
+$color__google: #dd4b39;
+$color__instagram: #3C5A96;
+$color__youtube: #cd201f;
+$color__rss: $color__honey;

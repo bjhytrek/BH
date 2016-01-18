@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+    
+    @import 'components/theme/colors.scss';
+    @import 'components/theme/vars.scss';
+    @import 'components/theme/style-reset.scss';
+    @import 'components/nav/nav.scss';
+    @import 'components/theme/breakpoints.scss';
+    @import 'components/header/header.scss';
+    
+
+   
+.bh {
+    
+   
+}
+body {
+
+	// GENERAL
+    margin-top: 5rem;
+	font-size: $font__size--mobile-base;
+    color: $color__primary;
+    line-height: 1.4;
+
+    // STICKY FOOTER
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+
+}
+    // FONTS
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: $font__family--serif;
+        font-weight: normal;
+    }

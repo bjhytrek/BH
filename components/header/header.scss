@@ -1,0 +1,102 @@
+.header {
+    // BLOCK
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $color__primary;
+    color: $color__white;
+    overflow: visible;
+    height: 5.5rem;
+    z-index: 200;
+    width: 100%;
+
+    .preview & {
+        top: 7.2rem;
+    }
+    
+    .header__main-row {
+        max-width: $max-width--project;
+        width: $mobile-width;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+
+        h1 {
+            a {
+                .header__logo-graphic {
+//                    display: none;
+                }
+                
+                .header__logo-text {
+                    display: inline-block;
+                    font-size: 1.6rem;
+                    vertical-align: middle;
+                    text-transform: uppercase;
+                    max-width: 17rem;
+                }
+            }
+        }
+
+        .icon, a {
+            color: $color__white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        span {
+            font-size: 3rem;
+        }
+    }
+
+	@media only screen and (min-width:$breakpoint--m + 1) {
+		.header__main-row{
+			h1{
+				a {
+					.header__logo-text{
+						max-width: 28rem;
+					}
+				}
+			}
+		}
+	}
+
+    @media only screen and (min-width:$breakpoint--l + 1) {
+        .header__main-row {
+            align-items: flex-start;
+
+            h1 {
+                z-index: 1;
+                position: relative;
+                top: 0;
+//                width: 13rem;
+//                height: 10rem;
+                a {
+                    display: block;
+                    height: 100%;
+//                    padding: 2.7rem 1.5rem 0;
+
+                    .header__logo-graphic{
+                        display: block;
+                        .chp-logo {
+                            display: block;
+                        }
+                    }
+                    .header__logo-text {
+//                        display: none;
+                    }
+                }
+            }
+            // ELEMENTS
+            #site-nav {
+                height: 100%;
+                width: 50%;
+                min-width: 50rem;
+            }
+            .icon {
+                display: none;
+            }
+        }
+    }
+}

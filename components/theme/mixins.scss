@@ -1,0 +1,31 @@
+@mixin rowMachine($numPerRow, $margin) {
+  width: ((100% - (($numPerRow - 1) * $margin)) / $numPerRow);
+  &:nth-child(n) {
+    margin-bottom: $margin;
+    margin-right: $margin;
+  }
+  &:nth-of-type(#{$numPerRow}n) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+@mixin hoverColor($property, $color, $amount, $color2) {
+    #{$property}: $color;
+    
+    &:hover, &:active  {
+        @if $amount >= 0 {
+            #{$property}: lighten($color2, $amount);
+        } @else {
+            #{$property}: darken($color2, abs($amount));
+        }
+    }
+}
+
+@mixin colorHover($color, $amount: 0, $color2: $color) {
+    @include hoverColor(color, $color, $amount, $color2)
+}
+
+@mixin backgroundHover($color, $amount: 0, $color2: $color) {
+    @include hoverColor(background, $color, $amount, $color2)
+}

@@ -1,0 +1,59 @@
+@media only screen and (max-width: $breakpoint--m) {
+        h1 {
+            font-size: $font__size--mobile-xxl;
+        }
+
+        h2 {
+            font-size: $font__size--mobile-xl;
+        }
+
+        h3 {
+            font-size: $font__size--mobile-l;
+        }
+
+        h4 {
+            font-size: $font__size--mobile-xs;
+        }
+
+        h5 {
+            font-size: $font__size--mobile-m;
+        }
+
+        h6 {
+            font-size: $font__size--mobile-xxs;
+        }
+    }
+
+    @media only screen and (min-width: $breakpoint--m + 1) {
+        h1 {
+            font-size: $font__size--desktop-xxl;
+        }
+
+        h2 {
+            font-size: $font__size--desktop-xl;
+        }
+
+        h3 {
+            font-size: $font__size--desktop-l;
+        }
+
+        h4 {
+            font-size: $font__size--desktop-m;
+        }
+
+        h5 {
+            font-size: $font__size--desktop-m;
+        }
+
+        h6 {
+            font-size: $font__size--desktop-xs;
+        }
+    }
+
+    @media only screen and (max-width: $breakpoint--l) {
+    }
+
+    @media only screen and (min-width: $breakpoint--l + 1) {
+        font-size: $font__size--desktop-base;
+        line-height: 1.7;
+    }

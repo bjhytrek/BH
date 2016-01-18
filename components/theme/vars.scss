@@ -1,0 +1,57 @@
+// ------------------------------------------------------------------
+// Generic Sass variables from the style guide (mfdc-sass-vars.scss) should generally be used in most components/selectors. This file is for extending those defaults ONLY when needed. Please make sure the variable you need doesn't already exist before you create a new one.
+// ------------------------------------------------------------------
+
+//FONT DEFINITIONS
+
+$font__family--sans: 'Source Sans Pro', "Zoram", "noto sans", Helvetica, Arial, sans-serif;
+$font__family--slab: "Helam", Calibri, Helvetica, Arial, sans-serif;
+$font__family--serif:  'Merriweather', Palatino, "Palatino Linotype", "Pahoran", "Georgia", "Times New Roman", serif;
+
+
+$font__size--mobile-xxs: 1.2rem; // 12pt
+$font__size--mobile-xs: 1.5rem;  // 15pt
+$font__size--mobile-s: 1.6rem;   // 16pt
+$font__size--mobile-m: 1.8rem;   // 18pt
+$font__size--mobile-l: 2.2rem;   // 22pt
+$font__size--mobile-xl: 2.8rem;  // 28pt
+$font__size--mobile-xxl: 3.2rem; // 32pt
+
+$font__size--desktop-xxs: 1.4rem; // 14pt
+$font__size--desktop-xs: 1.6rem;  // 15pt
+$font__size--desktop-s: 1.8rem;   // 18pt
+$font__size--desktop-m: 2rem;     // 20pt
+$font__size--desktop-l: 2.6rem;   // 26pt
+$font__size--desktop-xl: 3.4rem;  // 34pt
+$font__size--desktop-xxl: 4.6rem; // 46pt
+
+// THEME
+$slate-green: #608a7c;
+$dull-teal: #5fa994;
+$dark-grey: #4a4a4a;
+$light-grey: #c8c8c8;
+$warm-grey: #e4e3df;
+
+
+
+$color__primary: $dark-grey;
+$color__border: #C3C3C3;
+$color__border--dark: #9C9C9C;
+$font__size--mobile-base: $font__size--mobile-m;
+$font__size--desktop-base: $font__size--desktop-s;
+$font__family--primary: $font__family--sans;
+
+// BREAKPOINTS
+$breakpoint--l: 900px;
+$breakpoint--m: 640px;
+$breakpoint--s: 500px;
+
+
+// MAX WIDTH
+$max-width--project: 1200px;
+$mobile-width: 90%;
+$desktop-narrow-width: 66%;
+
+// ANIMATIONS
+$transition-speed--base: .3s;
+$transition-speed--slow: .7s;

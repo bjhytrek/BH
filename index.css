@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-family: "Source Sans Pro", "Zoram", "noto sans", Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0; }
+
+img {
+  max-width: 100%; }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+button {
+  background: transparent;
+  border: 0; }
+
+*:focus,
+*:active {
+  outline: 0; }
+
+button:focus,
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 1px 1px #4a4a4a; }
+
+::selection {
+  background: #4a4a4a;
+  color: #FFFFFF; }
+
+::-moz-selection {
+  background: #4a4a4a;
+  color: #FFFFFF; }
+
+.nav ul {
+  list-style: none; }
+@media only screen and (max-width: 900px) {
+  .nav#site-nav > .list {
+    background: #e4e3df;
+    position: fixed;
+    top: 5.5rem;
+    left: 0;
+    z-index: 100;
+    width: 100%; }
+    .preview .nav#site-nav > .list {
+      top: 12.5rem; }
+    .nav#site-nav > .list li {
+      border-bottom: 1px solid #C3C3C3; }
+      .nav#site-nav > .list li a {
+        padding: 0 5%;
+        display: block;
+        font-size: 1.8rem;
+        color: #4a4a4a;
+        line-height: 2; } }
+@media only screen and (min-width: 901px) {
+  .nav#site-nav {
+    color: #FFFFFF;
+    height: 100%; }
+    .nav#site-nav a {
+      color: #FFFFFF;
+      text-decoration: none; }
+      .nav#site-nav a:hover {
+        color: #c8c8c8; }
+    .nav#site-nav .list {
+      height: 100%; }
+    .nav#site-nav ul {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end; }
+      .nav#site-nav ul li {
+        padding-bottom: 1rem;
+        margin-left: 3rem;
+        white-space: nowrap; }
+        .nav#site-nav ul li:first-of-type {
+          margin-left: 0; }
+        .nav#site-nav ul li.selected {
+          position: relative; }
+          .nav#site-nav ul li.selected a {
+            color: #FFFFFF; } }
+
+@media only screen and (max-width: 640px) {
+  h1 {
+    font-size: 3.2rem; }
+
+  h2 {
+    font-size: 2.8rem; }
+
+  h3 {
+    font-size: 2.2rem; }
+
+  h4 {
+    font-size: 1.5rem; }
+
+  h5 {
+    font-size: 1.8rem; }
+
+  h6 {
+    font-size: 1.2rem; } }
+@media only screen and (min-width: 641px) {
+  h1 {
+    font-size: 4.6rem; }
+
+  h2 {
+    font-size: 3.4rem; }
+
+  h3 {
+    font-size: 2.6rem; }
+
+  h4 {
+    font-size: 2rem; }
+
+  h5 {
+    font-size: 2rem; }
+
+  h6 {
+    font-size: 1.6rem; } }
+@media only screen and (min-width: 901px) {
+  font-size: 1.8rem;
+  line-height: 1.7; }
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #4a4a4a;
+  color: #FFFFFF;
+  overflow: visible;
+  height: 5.5rem;
+  z-index: 200;
+  width: 100%; }
+  .preview .header {
+    top: 7.2rem; }
+  .header .header__main-row {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%; }
+    .header .header__main-row h1 a .header__logo-text {
+      display: inline-block;
+      font-size: 1.6rem;
+      vertical-align: middle;
+      text-transform: uppercase;
+      max-width: 17rem; }
+    .header .header__main-row .icon, .header .header__main-row a {
+      color: #FFFFFF;
+      text-decoration: none;
+      cursor: pointer; }
+    .header .header__main-row span {
+      font-size: 3rem; }
+  @media only screen and (min-width: 641px) {
+    .header .header__main-row h1 a .header__logo-text {
+      max-width: 28rem; } }
+  @media only screen and (min-width: 901px) {
+    .header .header__main-row {
+      align-items: flex-start; }
+      .header .header__main-row h1 {
+        z-index: 1;
+        position: relative;
+        top: 0; }
+        .header .header__main-row h1 a {
+          display: block;
+          height: 100%; }
+          .header .header__main-row h1 a .header__logo-graphic {
+            display: block; }
+            .header .header__main-row h1 a .header__logo-graphic .chp-logo {
+              display: block; }
+      .header .header__main-row #site-nav {
+        height: 100%;
+        width: 50%;
+        min-width: 50rem; }
+      .header .header__main-row .icon {
+        display: none; } }
+
+body {
+  margin-top: 5rem;
+  font-size: 1.8rem;
+  color: #4a4a4a;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Merriweather", Palatino, "Palatino Linotype", "Pahoran", "Georgia", "Times New Roman", serif;
+  font-weight: normal; }
+
+/*# sourceMappingURL=index.css.map */
