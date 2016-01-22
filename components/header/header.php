@@ -6,6 +6,6 @@
                 <span class="header__logo-text">Brendan Hytrek</span>
             </a>
         </h1>
-        <?php @include 'components/nav/nav.php' ?>
+        <?php include $_SERVER["DOCUMENT_ROOT"]."/BH/components/nav/nav.php"  ?>
     </div>
 </header>

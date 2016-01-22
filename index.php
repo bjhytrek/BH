@@ -3,7 +3,7 @@
     
 // ROUTING VARIABLES
     $path = 'pages/';
-    $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : '' ;
+    $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : null ;
     $php  = '.php';
     $both = $path . $page . $php;
     $pages = array( 'bh', 'cit336', 'cs313');
@@ -32,7 +32,7 @@
         }
     }
     else {
-         $content = getContent($default_page);
+         $content = getContent($error_page);
         
     }
 ?>
@@ -72,7 +72,7 @@
     ?>
                 <!--Import jQuery before materialize.js-->
                 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-                <script type="text/javascript" src="js/materialize.min.js"></script>
+                <script type="text/javascript" src="js/bin/materialize.min.js"></script>
     </body>
 
     </html>
