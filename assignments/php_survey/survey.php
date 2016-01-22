@@ -19,8 +19,13 @@ session_start();
          <h2>PHP Survey</h2>
         <?php 
             print_r($_SESSION);
-            if($_SESSION["visted"] !== "true"){
-         echo '<h3>Please take a moment to cast your vote for the best game of 2015.</h3>
+            $voted = $_SESSION["visted"];
+            if(isset($voted)){
+                
+            echo '<h3>Thank you for your vote! Please proceed to the results page.</h3>';
+         
+}else{
+            echo '<h3>Please take a moment to cast your vote for the best game of 2015.</h3>
          
          <form action="results.php" method="POST">
              <p>
@@ -51,8 +56,6 @@ session_start();
     <i class="material-icons right">send</i>
   </button><br>
         </form>';
-}else{
-    echo '<h3>Thank you for your vote! Please proceed to the results page.</h3>';
 }
         
         ?>

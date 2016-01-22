@@ -32,7 +32,7 @@
         }
     }
     else {
-         $content = getContent($error_page);
+         $content = getContent($default_page);
         
     }
 ?>
