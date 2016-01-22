@@ -19,8 +19,8 @@ session_start();
          <h2>PHP Survey</h2>
         <?php 
             print_r($_SESSION);
-            $voted = $_SESSION["visted"];
-            if(isset($voted)){
+            $voted = $_SESSION["visited"];
+            if($voted == 1){
                 
             echo '<h3>Thank you for your vote! Please proceed to the results page.</h3>';
          
