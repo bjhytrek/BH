@@ -1,1 +1,1 @@
-{"StarCraft":2,"Witcher 3":2,"Fallout 4":0,"StarWars Battlefront":2,"Euro Trucker":0,"Diddy Kong":1,"":8}
+{"StarCraft":2,"Witcher 3":2,"Fallout 4":0,"StarWars Battlefront":2,"Euro Trucker":0,"Diddy Kong":1,"":9}
