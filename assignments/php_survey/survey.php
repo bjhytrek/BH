@@ -18,7 +18,7 @@ session_start();
      <main>
          <h2>PHP Survey</h2>
         <?php 
-            print_r($_SESSION);
+//            print_r($_SESSION);
             $voted = $_SESSION["visited"];
             if($voted == 1){
                 

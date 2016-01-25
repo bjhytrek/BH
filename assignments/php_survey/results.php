@@ -23,11 +23,11 @@ session_start();
         <?php 
     
         $vote = $_POST["game"];
-        if(isset($vote) and $_SESSION["visited"] == 1) {
+        if(isset($vote) or $_SESSION["visited"] == 1) {
             echo "<h4>You have voted for $vote as the best game of 2015.</h4>";
             $_SESSION["visited"] = 1;
         }else {
-            print_r($_SESSION);
+//            print_r($_SESSION);
             echo "<h4>You haven't voted yet!</h4><a class=\"waves-effect waves-light btn\" href=\"survey.php\">Take Survey</a><br>";
             unset($_SESSION["visited"]);
             
