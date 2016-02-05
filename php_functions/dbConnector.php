@@ -17,12 +17,12 @@ function loadDatabase()
           // Not in the openshift environment
           echo "Using local credentials: "; 
           require("setLocalDatabaseCredentials.php");
-         echo "host:$dbHost:$dbPort dbName:$dbName user:$dbUser password:$dbPassword<br >\n";
+//         echo "host:$dbHost:$dbPort dbName:$dbName user:$dbUser password:$dbPassword<br >\n";
      }
      else 
      { 
           // In the openshift environment
-          echo "Using openshift credentials: ";
+//          echo "Using openshift credentials: ";
 
           $dbHost = getenv('OPENSHIFT_MYSQL_DB_HOST');
           $dbPort = getenv('OPENSHIFT_MYSQL_DB_PORT'); 
