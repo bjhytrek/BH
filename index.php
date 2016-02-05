@@ -35,6 +35,11 @@
          $content = getContent($default_page);
         
     }
+// DATABASE CONNECTION
+
+require($_SERVER['DOCUMENT_ROOT'] . "/php_functions/dbConnector.php"); 
+$db = loadDatabase(); 
+
 ?>
 
 
@@ -54,14 +59,14 @@
 
     <body>
         <?php include 'components/header/header.php'; ?>
-        <main>
-           
-            <?php
-            echo $content; ?>
-        </main>
-        
+            <main>
 
-        
+                <?php
+            echo $content; ?>
+            </main>
+
+
+
 
             <?php 
     if($site_id === "cit336"){
