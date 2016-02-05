@@ -6,7 +6,7 @@
     $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : null ;
     $php  = '.php';
     $both = $path . $page . $php;
-    $pages = array( 'bh', 'cit336', 'cs313');
+    $pages = array( 'bh', 'cit336', 'cs313', 'amazon');
     $default_page = 'pages/bh.php';
     $error_page = 'pages/error.php';
 

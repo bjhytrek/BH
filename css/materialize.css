@@ -8468,4 +8468,7 @@ body {
 main {
   flex: 1 0 auto; }
 
+.nav__links {
+  text-transform: uppercase; }
+
 /*# sourceMappingURL=materialize.css.map */

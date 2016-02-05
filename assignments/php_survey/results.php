@@ -47,7 +47,7 @@ session_start();
             
         }else {
             // Initialize array
-             $votes = array_fill_keys(array('StarCraft', 'Witcher 3', 'Fallout 4', 'StarWars Battlefront', 'Euro Trucker', 'Diddy Kong'), 0);
+             $votes = array_fill_keys(array('StarCraft', 'Witcher 3', 'Fallout 4', 'StarWars Battlefront', 'Euro Trucker', 'Diddy Kong'), '0');
             $votes[$vote]+=1;
             
         }
