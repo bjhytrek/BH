@@ -17,6 +17,7 @@ function loadDatabase()
           // Not in the openshift environment
           echo "Using local credentials: "; 
           require("setLocalDatabaseCredentials.php");
+         echo "host:$dbHost:$dbPort dbName:$dbName user:$dbUser password:$dbPassword<br >\n";
      }
      else 
      { 
@@ -28,7 +29,7 @@ function loadDatabase()
           $dbUser = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
           $dbPassword = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
      } 
-     echo "host:$dbHost:$dbPort dbName:$dbName user:$dbUser password:$dbPassword<br >\n";
+     
     try {
         $db = new PDO("mysql:host=$dbHost;dbname=$dbName", $dbUser, $dbPassword);
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
