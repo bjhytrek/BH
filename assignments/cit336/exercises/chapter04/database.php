@@ -2,6 +2,9 @@
     $dsn = 'mysql:host=localhost;dbname=my_guitar_shop1';
     $username = 'mgs_user';
     $password = 'pa55word';
+    $dbName = "my_guitar_shop1";
+    $openShiftVar = getenv('OPENSHIFT_MYSQL_DB_HOST');
+
 
         if ($openShiftVar === null || $openShiftVar == "")
      {
