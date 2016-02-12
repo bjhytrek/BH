@@ -1,12 +1,17 @@
 <?php
     $site_id = $_POST["site_id"];
     
+
+//  IMPORTS AND REQUIRES
+
 // ROUTING VARIABLES
+    $get_action = isset($_REQUEST['actin']) ? $_REQUEST['action'] : null ;
+
     $path = 'pages/';
     $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : null ;
     $php  = '.php';
     $both = $path . $page . $php;
-    $pages = array( 'bh', 'cit336', 'cs313', 'amazon');
+    $pages = array( 'bh', 'cit336', 'cs313', 'amazon', 'user');
     $default_page = 'pages/bh.php';
     $error_page = 'pages/error.php';
 
@@ -76,7 +81,9 @@ $db = loadDatabase();
             <main>
 
                 <?php
-            echo $content; ?>
+            echo $content; 
+            echo $action;
+                ?>
             </main>
 
 
