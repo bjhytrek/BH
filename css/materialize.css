@@ -8471,4 +8471,12 @@ main {
 .nav__links {
   text-transform: uppercase; }
 
+a.login {
+  float: right;
+  margin-right: 3rem; }
+
+.container .row {
+  margin-left: 0;
+  margin-right: 0; }
+
 /*# sourceMappingURL=materialize.css.map */

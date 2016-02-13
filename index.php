@@ -1,17 +1,17 @@
 <?php
     $site_id = $_POST["site_id"];
-    
+    session_start();
 
 //  IMPORTS AND REQUIRES
 
 // ROUTING VARIABLES
-    $get_action = isset($_REQUEST['actin']) ? $_REQUEST['action'] : null ;
+    $get_action = isset($_REQUEST['action']) ? $_REQUEST['action'] : null ;
 
     $path = 'pages/';
     $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : null ;
     $php  = '.php';
     $both = $path . $page . $php;
-    $pages = array( 'bh', 'cit336', 'cs313', 'amazon', 'user');
+    $pages = array( 'bh', 'cit336', 'cs313', 'amazon', 'my user', 'php project', 'login');
     $default_page = 'pages/bh.php';
     $error_page = 'pages/error.php';
 
@@ -52,11 +52,11 @@ $db = loadDatabase();
     <html>
 
     <head>
-        <!--Import Google Icon Font-->
-        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
-
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
         <script type='text/javascript'>
             window.onAmazonLoginReady = function () {
@@ -77,13 +77,15 @@ $db = loadDatabase();
     </head>
 
     <body>
-        <?php include 'components/header/header.php'; ?>
-            <main>
-
-                <?php
-            echo $content; 
-            echo $action;
+        <?php include 'components/nav/nav.php'; ?>
+            <main class="container">
+                <div class="row">
+                    <?php
+                    echo $content; 
+            
                 ?>
+                </div>
+
             </main>
 
 
@@ -99,6 +101,7 @@ $db = loadDatabase();
                 <!--Import jQuery before materialize.js-->
                 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
                 <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+                <script type="text/javascript" src="index.js"></script>
     </body>
 
     </html>

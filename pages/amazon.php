@@ -30,7 +30,7 @@ btnLWA_gold_156x32.png" width="156" height="32" />
                 scope: 'profile'
             };
             amazon.Login.authorize(options,
-                'https://bh.dev/pages/handle_login.php');
+                handle_login());
             return false;
         };
     </script>

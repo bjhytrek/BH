@@ -26,6 +26,6 @@ curl_setopt($c, CURLOPT_RETURNTRANSFER, true);
 $r = curl_exec($c);
 curl_close($c);
 $d = json_decode($r);
-return sprintf('%s %s %s', $d->name, $d->email, $d->user_id);
+echo sprintf('%s %s %s', $d->name, $d->email, $d->user_id);
 
 ?>
