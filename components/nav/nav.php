@@ -1,6 +1,7 @@
 <nav class="nav" id="site-nav">
     <div class="nav-wrapper container">
-        <ul class="left hide-on-med-and-down">
+       <a id="logo-container" href="/index.php" class="brand-logo">BH</a>
+        <ul class="right hide-on-med-and-down">
             <?php
         $nav_links = array ('bh', 'cit336', 'cs313', 'amazon', 'my user', 'php project');
         foreach($nav_links as $link){
@@ -12,12 +13,12 @@
 
 
                 <li>
-                        <?php
-                    if(isset($_SESSION['logged_in'])){
-                       $login_btn .= '<a class="waves-effect waves-light btn-large login" href="index.php?page=logout">Logout</a>';
+                    <?php
+                    if(isset($_SESSION['logged_user'])){
+                       $login_btn .= '<a class="waves-effect waves-light btn" href="/index.php?page=logout">Logout</a>';
                     }else {
 
-                        $login_btn .= '<a class="waves-effect waves-light btn">button</a>';
+                        $login_btn .= '<a class="waves-effect waves-light btn" href="/index.php?page=login">Login</a>';
 
                     }
                     echo $login_btn;

@@ -1,17 +1,17 @@
-<?php
+<!DOCTYPE html>
+    <html>
+   <?php
     $site_id = $_POST["site_id"];
     session_start();
 
 //  IMPORTS AND REQUIRES
-
 // ROUTING VARIABLES
-    $get_action = isset($_REQUEST['action']) ? $_REQUEST['action'] : null ;
-
+//  
     $path = 'pages/';
     $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : null ;
     $php  = '.php';
     $both = $path . $page . $php;
-    $pages = array( 'bh', 'cit336', 'cs313', 'amazon', 'my user', 'php project', 'login');
+    $pages = array( 'bh', 'cit336', 'cs313', 'amazon', 'my user', 'php project', 'login','logout', 'register');
     $default_page = 'pages/bh.php';
     $error_page = 'pages/error.php';
 
@@ -40,16 +40,11 @@
          $content = getContent($default_page);
         
     }
-// DATABASE CONNECTION
-
-require($_SERVER['DOCUMENT_ROOT'] . "/php_functions/dbConnector.php"); 
-$db = loadDatabase(); 
 
 ?>
 
 
-    <!DOCTYPE html>
-    <html>
+    
 
     <head>
 
@@ -58,6 +53,7 @@ $db = loadDatabase();
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+<!--
         <script type='text/javascript'>
             window.onAmazonLoginReady = function () {
                 amazon.Login.setClientId('amzn1.application-oa2-client.ef152a240a7741718b01300dc81d08b8');
@@ -66,6 +62,7 @@ $db = loadDatabase();
         <script type='text/javascript' src='https://static-na.payments-amazon.com/OffAmazonPayments/us/
           sandbox/lpa/js/Widgets.js'>
         </script>
+-->
 
 
 
@@ -77,7 +74,12 @@ $db = loadDatabase();
     </head>
 
     <body>
-        <?php include 'components/nav/nav.php'; ?>
+        <?php include 'components/nav/nav.php'; 
+        // DATABASE CONNECTION
+
+//        require($_SERVER['DOCUMENT_ROOT'] . "/php_functions/dbConnector.php"); 
+//        $db = loadDatabase(); 
+        ?>
             <main class="container">
                 <div class="row">
                     <?php
