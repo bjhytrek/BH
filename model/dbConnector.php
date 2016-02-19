@@ -15,8 +15,8 @@ function loadDatabase()
      if ($openShiftVar === null || $openShiftVar == "")
      {
           // Not in the openshift environment
-          echo "Using local credentials: "; 
-          require("setLocalDatabaseCredentials.php");
+//          echo "Using local credentials: "; 
+          require($_SERVER['DOCUMENT_ROOT'] . "/model/setLocalDatabaseCredentials.php");
 //         echo "host:$dbHost:$dbPort dbName:$dbName user:$dbUser password:$dbPassword<br >\n";
      }
      else 

@@ -1,91 +1,30 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
-    <html>
-   <?php
-    $site_id = $_POST["site_id"];
-    session_start();
+<html>
 
-//  IMPORTS AND REQUIRES
-// ROUTING VARIABLES
-//  
-    $path = 'pages/';
-    $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : null ;
-    $php  = '.php';
-    $both = $path . $page . $php;
-    $pages = array( 'bh', 'cit336', 'cs313', 'amazon', 'my user', 'php project', 'login','logout', 'register');
-    $default_page = 'pages/bh.php';
-    $error_page = 'pages/error.php';
-
-//  ROUTING LOGIC
-
-    function getContent($requested_page){
-        
-            ob_start();                      // start capturing output
-            include($requested_page);                  // execute the file
-            $content = ob_get_contents();    // get the contents from the buffer
-            ob_end_clean();                  // stop buffering and discard contents
-            return $content;
-    }
-    if (!empty($page)) {
-
-        if(in_array($page,$pages)) {
-            //$page .= '.php';
-            $content = getContent($both);
-        }
-        else {
-           $content = getContent($default_page);
-
-        }
-    }
-    else {
-         $content = getContent($default_page);
-        
-    }
-
-?>
-
-
-    
-
-    <head>
-
-        <!--Import materialize.css-->
-        <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
-        <!--Import Google Icon Font-->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-<!--
-        <script type='text/javascript'>
-            window.onAmazonLoginReady = function () {
-                amazon.Login.setClientId('amzn1.application-oa2-client.ef152a240a7741718b01300dc81d08b8');
-            };
-        </script>
-        <script type='text/javascript' src='https://static-na.payments-amazon.com/OffAmazonPayments/us/
-          sandbox/lpa/js/Widgets.js'>
-        </script>
--->
-
-
-
-
-        <title>Brendan Hytrek</title>
-        <!--Let browser know website is optimized for mobile-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    </head>
+<?php include 'components/head/head.php'; ?>
 
     <body>
-        <?php include 'components/nav/nav.php'; 
-        // DATABASE CONNECTION
-
-//        require($_SERVER['DOCUMENT_ROOT'] . "/php_functions/dbConnector.php"); 
-//        $db = loadDatabase(); 
+        <?php 
+        include 'components/nav/nav.php'; 
         ?>
             <main class="container">
                 <div class="row">
-                    <?php
-                    echo $content; 
-            
-                ?>
+                    <h2>Brendan Hytrek Home page</h2>
+                    <div class="row">
+                        <div class="col s12 m7">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="/media/selfie.jpg">
+                                    <span class="card-title">About Me</span>
+                                </div>
+                                <div class="card-content">
+                                    <p>My name is Brendan Hytrek. I am a Web Design and Development major at BYU-Idaho. I currently live in Rexburg, Idaho. I am currently working locally with a team performing maintenance on LDS.org. I was also part of a small team that built <a href="https://churchhistorianspress.org/">The Church Historian's Press</a>,
+                                        <a href="https://churchhistorianspress.org/publications">The George Q. Cannon Papers</a>, and <a href="https://churchhistorianspress.org/publications">The Relief Society Papers</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </main>
@@ -102,8 +41,8 @@
     ?>
                 <!--Import jQuery before materialize.js-->
                 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-                <script type="text/javascript" src="js/bin/materialize.min.js"></script>
-                <script type="text/javascript" src="index.js"></script>
+                <script type="text/javascript" src="/js/bin/materialize.min.js"></script>
+                <script type="text/javascript" src="/index.js"></script>
     </body>
 
-    </html>
+</html>

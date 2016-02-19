@@ -1,26 +1,25 @@
 <!DOCTYPE html>
-    <html>
-    
-<?phpinclude 'components/head/head.php'; ?>
+<html>
+
+<?php include '' . $_SERVER['DOCUMENT_ROOT'] . '/components/head/head.php'; ?>
+
     <body>
         <?php 
-        include 'components/nav/nav.php'; 
+        include '' . $_SERVER['DOCUMENT_ROOT'] . '/components/nav/nav.php'; 
         ?>
             <main class="container">
                 <div class="row">
-                <h1>Cart</h1>
+                    <h3>My Account</h3>
+                    
+                    <h4><?php echo $message; ?></h4>
                 </div>
 
             </main>
-
-
-
-
             <?php 
     if($site_id === "cit336"){
-        include 'components/cit336/footer/footer.php';
+        include '' . $_SERVER['DOCUMENT_ROOT'] . '/components/cit336/cit336.php';
     }else {
-            include 'components/footer/footer.php';
+            include '' . $_SERVER['DOCUMENT_ROOT'] . '/components/footer/footer.php';
     } 
     ?>
                 <!--Import jQuery before materialize.js-->
@@ -29,4 +28,4 @@
                 <script type="text/javascript" src="/index.js"></script>
     </body>
 
-    </html>
+</html>

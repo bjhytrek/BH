@@ -21,7 +21,7 @@
           <div class="footer-copyright">
             <div class="container">
             © 2014 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="/index.php?page=cit336">CIT336 Assignments</a>
+            <a class="grey-text text-lighten-4 right" href="/cit336/index.php">CIT336 Assignments</a>
             </div>
           </div>
         </footer>
