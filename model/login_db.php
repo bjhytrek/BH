@@ -8,7 +8,8 @@ function login_user(){
     $username = stripslashes($_POST['username']);
     $password = stripslashes($_POST['password']);
     
-    $stmt = $db->prepare("SELECT username, password FROM user WHERE username = '$username'");
+    $stmt = $db->prepare('SELECT username, password FROM user WHERE username = :username');
+    $stmt->bindValue(':username', $username);     
     $stmt->execute();
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
     
