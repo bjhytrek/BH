@@ -20,9 +20,9 @@
                                 <br>
                                 <input type="password" placeholder="password" name="password" class="validate"></input>
                             </div>
-                            <a class="btn waves-effect waves-light" type="submit" name="submit">Submit
+                            <button class="btn waves-effect waves-light" type="submit" name="submit">Submit
                                 <i class="material-icons right">send</i>
-                            </a>
+                            </button>
                         </form>
                         </div>';
                         }
