@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+
     <!DOCTYPE html>
     <html>
 
@@ -11,9 +11,9 @@
                 <main class="container">
                     <div class="row">
                         <h2>Products</h2>
-
-                        <?php if($_SESSION['admin_user']){
-                        echo '<a href="/admin/products/index.php">Admin Edit</a>';
+                        <?php 
+                        if($_SESSION['admin_user']){
+                        echo '<a href="/admin/products/index.php"><h4>Admin Edit</h4></a>';
                         }?>
                             <?php foreach ($products as $product) : ?>
                                 <div class="col s12 m6 l4">

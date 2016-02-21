@@ -1,5 +1,5 @@
 <?php
-
+session_start(); 
 //  REQUIRE DB FUNCTION TO GET PRODUCTS FROM DATABASE.
 require ($_SERVER['DOCUMENT_ROOT'] . '/model/products_db.php');
 
