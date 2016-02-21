@@ -1,6 +1,7 @@
 <?php
 //  REQUIRE DB CONNECTION
     require($_SERVER['DOCUMENT_ROOT'] . '/model/dbConnector.php');
+    require($_SERVER['DOCUMENT_ROOT'] . '/model/password.php');
     
 function login_user(){
     $db = loadDatabase();
