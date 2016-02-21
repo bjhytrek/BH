@@ -11,8 +11,7 @@ function login_user(){
     $stmt = $db->prepare('SELECT username, password FROM user WHERE username = :username');
     $stmt->bindValue(':username', $username);     
     $stmt->execute();
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);
-    $statement->closeCursor();
+    $user = $stmt->fetch();
     
 //    echo $user['username'], $user['password'];
     
