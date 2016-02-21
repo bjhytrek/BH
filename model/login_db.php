@@ -12,6 +12,7 @@ function login_user(){
     $stmt->bindValue(':username', $username);     
     $stmt->execute();
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    $statement->closeCursor();
     
 //    echo $user['username'], $user['password'];
     
