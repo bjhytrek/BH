@@ -9,8 +9,9 @@
         ?>
             <main class="container">
                 <div class="row">
-                    <h3>My Account</h3>
+                    <h3>Edit My Account</h3>
                     
+                    <h4>Current Account Information:</h4>
                     <table class="striped">
                         <tbody>
                             <tr>
@@ -29,7 +30,11 @@
                     </table>
                     <?php echo $message ?>
                 </div>
-                <a class="btn" href="/account/index.php?action=edit_account">Edit Account</a>
+                <form action="/account/index.php" method="post">
+                    <input type="text" name="username" placeholder="username">
+                    <input type="text" name="email" placeholder="email">
+                    <button class="btn" type="submit" name="submit">Submit</a>
+                </form>
             </main>
             <?php 
     if($site_id === "cit336"){

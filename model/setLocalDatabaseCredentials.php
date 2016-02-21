@@ -2,7 +2,7 @@
 
     $dbHost = "localhost";
     $dbPort = "3306";
-    $dbUser = "bjhytrek";
+    $dbUser = "php";
     $dbPassword = "Drpepper1991";
 
 

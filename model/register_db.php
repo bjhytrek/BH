@@ -22,7 +22,9 @@ function register_user(){
         $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 // Prepared statement to insert a user
         $stmt = $db->prepare("INSERT INTO user (username, password)
-    VALUES ('$username', '$passwordHash');");
+    VALUES (:username, :passwordHash);");
+        $stmt->bindValue(':username', $username); 
+        $stmt->bindValue(':passwordHash', $passwordHash); 
         $stmt->execute();
         $_SESSION['logged_user'] = $username;
         $message = "$username, you are now registered.";

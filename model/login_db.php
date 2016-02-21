@@ -14,12 +14,17 @@ function login_user(){
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
     
 //    echo $user['username'], $user['password'];
+    
 //  Check if user is in database
-    if ($user['username'] and password_verify($username, $user['password'])){
+    if ($user['username'] and password_verify($password, $user['password'])){
         
-//  User is DB, log them in.
+//  Check admin status and set session to reflect.
+        if($user['admin'] == 1){
+            $_SESSION['user_admin'] = true;
+        }
+//  User is in DB, log them in.
         $_SESSION['logged_user'] = $user['username'];
-         $message = $user['username'] . " You are now logged in!";
+         $message = $user['username'] .  ' You are now logged in!';
     }else {
         $message = "The Username or Password entered was not found in our database.";
     }
