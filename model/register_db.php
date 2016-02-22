@@ -12,6 +12,7 @@ function register_user(){
 //  get user submitted form
         $username = stripslashes($_POST['username']);
         $password = stripslashes($_POST['password']);
+        $email = stripslashes($_POST['email']);
         
 
 //  Check if username exists using check_user()
@@ -21,10 +22,11 @@ function register_user(){
 //  hash and salt password
         $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 // Prepared statement to insert a user
-        $stmt = $db->prepare("INSERT INTO user (username, password)
-    VALUES (:username, :passwordHash);");
+        $stmt = $db->prepare("INSERT INTO user (username, email, password)
+    VALUES (:username, :email, :passwordHash);");
         $stmt->bindValue(':username', $username); 
         $stmt->bindValue(':passwordHash', $passwordHash); 
+        $stmt->bindValue(':email', $email); 
         $stmt->execute();
         $_SESSION['logged_user'] = $username;
         $message = "$username, you are now registered.";

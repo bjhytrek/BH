@@ -13,7 +13,7 @@
                         <h2>Products</h2>
                         <?php 
                         if($_SESSION['admin_user']){
-                        echo '<a href="/admin/products/index.php"><h4>Admin Edit</h4></a>';
+                        echo '<a href="/admin/product_manager/index.php"><h4>Admin Edit</h4></a>';
                         }?>
                             <?php foreach ($products as $product) : ?>
                                 <div class="col s12 m6 l4">
