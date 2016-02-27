@@ -1,7 +1,10 @@
 
 <footer>
     <p class="copyright">
-        &copy; <?php echo date("Y"); ?> SportsPro, Inc.
+       
+        &copy; <?php
+         date_default_timezone_set("America/Denver");
+        echo date("Y"); ?> SportsPro, Inc.
     </p>
 </footer>
 </body>

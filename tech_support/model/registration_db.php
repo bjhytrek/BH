@@ -16,9 +16,21 @@ function add_registration($customer_id, $product_code) {
         
         return true;
     }else {
-        print_r($statement->errorInfo());
-        print_r($customer_id);
         return false;
     }  
+}
+function is_registered($product_code) {
+    global $db;
+    
+// Check if a product is already registered to this user.
+    $query = "SELECT customerID FROM registrations WHERE productCode = :product_code;";
+    $statement = $db->prepare($query);
+    $statement->bindValue(':product_code', $product_code);
+    $statement->execute();
+    if($statement->rowCount() > 0){
+           return true;
+    }else {
+        return false;
+    }
 }
 ?>

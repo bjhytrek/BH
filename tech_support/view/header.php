@@ -16,6 +16,7 @@
     <nav>
         <ul>
             <li><a href="/tech_support">Home</a></li>
+            <li><a href="/tech_support?action='logout'">logout</a></li>
         </ul>
     </nav>
 </header>

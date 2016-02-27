@@ -11,7 +11,6 @@ require('../model/registration_db.php');
 require('../model/product_db.php');
 
 $action = filter_input(INPUT_POST, 'action');
-var_dump($action);
 
 if ($action == NULL){
     $action = filter_input(INPUT_GET, 'action');
@@ -45,19 +44,40 @@ if($action == 'login'){
     }
     
 }else if($action == 'register_product'){
-    print_r($_SESSION['customerId']);
     $customerID = $_SESSION['customerId'];
     $submitted_product = filter_input(INPUT_POST, 'product');
     if(!$submitted_product == null){
-        $inserted = add_registration($customerID, $submitted_product);
-        if($inserted){
-            $message = 'Product (' . $submitted_product .') was registered succesfully.';
-            include 'product_register.php';
+        if(!is_registered($submitted_product)){
+                $inserted = add_registration($customerID, $submitted_product);
+            if($inserted){
+                $message = 'Product (' . $submitted_product .') was registered succesfully.';
+                
+            }else {
+                $message = 'Product (' . $submitted_product . ') could not be registered.';
+               
+            }
         }else {
-            $message = 'Product (' . $submitted_product . ') could not be registered.';
-            include 'product_register.php';
-        }   
+            $message = 'Product (' . $submitted_product . ') has already been registered.';
+        }
+          include 'product_register.php'; 
     }
+}else if($action == 'logout'){
+    // Unset all of the session variables.
+    $_SESSION = array();
+
+    // If it's desired to kill the session, also delete the session cookie.
+    // Note: This will destroy the session, and not just the session data!
+    if (ini_get("session.use_cookies")) {
+        $params = session_get_cookie_params();
+        setcookie(session_name(), '', time() - 42000,
+            $params["path"], $params["domain"],
+            $params["secure"], $params["httponly"]
+        );
+    }
+
+    // Finally, destroy the session.
+    session_destroy();
+    include 'customer_login';
 }
 /* 
  * What you will need
