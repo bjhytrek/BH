@@ -1,0 +1,4 @@
+# disable directory listing - keeps site visitors from 
+# seeing the contents of a folder if a default page 
+# is not provided in the folder
+Options -Indexes
