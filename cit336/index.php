@@ -17,7 +17,8 @@
                             <li class="flow-text"><a href="/assignments/cit336/exercises/chapter04/index.php">Chapter 4 Exercise/Enhancement 1</a></li>
                             <li class="flow-text"><a href="/assignments/cit336/chapter05/">Chapter 5 Exercise/Enhancement 1</a></li>
                             <li class="flow-text"><a href="/assignments/cit336/chapter06/">Chapter 6 Exercise 2</a></li>
-                            <li class="flow-text"><a href="/assignments/unit_2_exam/index.php">Unit 2 Exam</a></li>
+                            <li class="flow-text"><a href="/assignments/cit336/chapter07/index.php">Chapter 7 Enhancement 2</a></li>
+                            <li class="flow-text"><a href="/assignments/cit336/chapter08/index.php">Chapter 8 Enhancement 2</a></li>
                         </ul>
                 </div>
 
