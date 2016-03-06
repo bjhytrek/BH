@@ -19,6 +19,8 @@
                             <li class="flow-text"><a href="/assignments/cit336/chapter06/">Chapter 6 Exercise 2</a></li>
                             <li class="flow-text"><a href="/assignments/cit336/chapter07/index.php">Chapter 7 Enhancement 2</a></li>
                             <li class="flow-text"><a href="/assignments/cit336/chapter08/index.php">Chapter 8 Enhancement 2</a></li>
+                            <li class="flow-text"><a href="/assignments/cit336/exercises/chapter11-1/index.php">Chapter 11 Exercise 11-1</a></li>
+                            <li class="flow-text"><a href="/assignments/cit336/enhancements/chapter11/index.php">Chapter 11 Enhancement 11</a></li>
                         </ul>
                 </div>
 
