@@ -149,6 +149,7 @@ if (in_array(1.13, $a, true)) {
                                 }
                             ?>
                                 <p>"12.4" was not found becuase in_array("12.4", $a, true) is searching for a string of "12.4" not an integer.</p>
+                                <p>For more information on in_array() take a look at <a href="http://php.net/manual/en/function.in-array.php">php.net in-array()</a>.</p>
                     </div>
 
                 </main>
