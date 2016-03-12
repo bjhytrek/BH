@@ -61,3 +61,8 @@ a.login {
     margin-left: 0;
     margin-right: 0;
 }
+div.code {
+    border-left: thick solid green;
+    padding-left: .5rem;
+    @extend .z-depth-2;
+}

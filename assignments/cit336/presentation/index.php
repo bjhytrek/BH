@@ -34,22 +34,22 @@
 
                     ?>
                             <p>Lets take a look at a few functions we can use to manipulate, or get information from arrays in PHP.</p>
-
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/eNkCkj8mZT4" frameborder="0" allowfullscreen></iframe>
                             <h3>sort()</h3>
                             <h5>This function sorts an array. Elements will be arranged from lowest to highest when this function has completed.</h5>
                             <p>What is the sort() function, what does it do?<em>This function sorts an array. Elements will be arranged from lowest to highest when this function has completed.</em> Sounds pretty straight forward right? Well, lets see it in action..</p>
                             <p>We will use the following array to see how we can use the sort() function.</p>
-                            <code>
+                            <div class="code"><code>
                         <?php
                    echo htmlspecialchars('<?php cars=array("Volvo","BMW","Toyota", "Acura"); 
                                 ?>');
 ?>
-                            </code>
+                                </code></div>
                             <p>First, lets sort this array naturally.</p>
-                            <code>sort($fruits);<br>
+                            <div class="code"><code>sort($fruits);<br>
                                 foreach ($fruits as $key => $val) <br>{
                                     echo "fruits[" . $key . "] = " . $val . "\n";
-                            }</code>
+                                }</code></div>
                             <p>Here is the output:</p>
                             <?php sort($cars);
                                 foreach ($cars as $key => $val){
@@ -68,8 +68,7 @@
                                 <p>Makes sense but, why would I use count()? Well, lets say you query your database by selecting all the car brand names stored and then return that to your php server as an array called "$car_brands". You could easily find out how many were found by running the code: <code><em>count($car_brands);</em></code></p>
                                 <p>What if one wishes to get the count() of a multivariable array? Easy, all we have to do is pass in a flag to signal that we want to run count recursively. The flag is the second parameter in count($cars,1); This parameter "1" represents "true".</p>
                                 <p>Lets use a new array:</p>
-                                <pre>
-<code>
+<div class="code"><pre><code>
 <?php echo htmlspecialchars('<?php
 $cars2=array
     (
@@ -91,8 +90,7 @@ $cars2=array
 echo "Normal count: " . count($cars)."<br>";
 echo "Recursive count: " . count($cars,1);
 ?>'); ?>
-</code>
-                                </pre>
+</code></pre></div>
                                 <p>The results:</p>
                                 <?php
                                 echo "Normal count: " . count($cars2)."<br>";
@@ -102,7 +100,7 @@ echo "Recursive count: " . count($cars,1);
                                 <h3>in_array()</h3>
                                 <h5>in_array - Checks if a value exists in an array</h5>
                                 <p>This is another easy one. Lets use an example straight from php.net. Here is the code:</p>
-<pre>
+<div class="code"><pre>
     <code>
         <?php echo htmlspecialchars('
 <?php
@@ -115,13 +113,13 @@ if (in_array("mac", $os)) {
 }
 ?>'); ?>
     </code>
-</pre>        
+</pre></div>       
                               <p>The second condition fails because in_array() is case-sensitive, so the program above will display:</p>  
                               <code>Got Irix</code> 
                               <p>We can also set a third parameter to <strong>true</strong>, which will enable in_array() to check the type of entity we're looking for.</p>
                               <p>Here is an example using strict with a new array:</p> 
-<pre>
-    <code>
+<div class="code">   
+<pre><code>
 <?php
 echo htmlspecialchars('
 <?php
@@ -137,7 +135,7 @@ if (in_array(1.13, $a, true)) {
 ?> 
 '); ?>
     </code>
-</pre>
+</pre></div>
                                 <p>The results:</p>
                                 <?php 
                                  if (in_array('12.4', $a, true)) {
